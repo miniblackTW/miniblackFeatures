@@ -1,0 +1,20 @@
+name: MiniblackFeatures
+main: me.miniblacktw.miniblackfeatures.MiniblackFeaturesPlugin
+version: 1.0
+api-version: 1.20
+commands:
+  lore:
+    description: 為物品新增註解
+  shriek:
+    description: 生成 Shriek 粒子效果
+  magicstick:
+    description: 取得魔法棒
+  miniwarn:
+    description: 更明顯的警告玩家
+permissions:
+  miniblack.magicstick:
+    description: 允許使用魔法棒
+    default: op
+  miniblack.miniwarn:
+    description: 允許警告玩家
+    default: op
