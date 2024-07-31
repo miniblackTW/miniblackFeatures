@@ -18,12 +18,12 @@ public class LoreCommand implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0) {
-                player.sendMessage(ChatColor.RED + "§c用法: /lore <your lore>");
+                player.sendMessage(ChatColor.RED + "用法: /lore <your lore>");
                 return true;
             }
             ItemStack item = player.getInventory().getItemInMainHand();
             if (item == null || !item.hasItemMeta()) {
-                player.sendMessage(ChatColor.RED + "§c你必須拿著一樣物品");
+                player.sendMessage(ChatColor.RED + "你必須拿著一樣物品");
                 return true;
             }
             ItemMeta meta = item.getItemMeta();
@@ -35,7 +35,7 @@ public class LoreCommand implements CommandExecutor {
             lore.add(ChatColor.translateAlternateColorCodes('&', loreBuilder.toString().trim()));
             meta.setLore(lore);
             item.setItemMeta(meta);
-            player.sendMessage(ChatColor.GREEN + "§a已將註解添加到你的物品");
+            player.sendMessage(ChatColor.GREEN + "已將註解添加到你的物品");
         }
         return true;
     }
